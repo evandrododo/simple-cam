@@ -2,7 +2,9 @@ import React, {
     Component
 } from 'react';
 import './webcam.scss';
-import { FaStop, FaTimes, FaExchangeAlt } from 'react-icons/fa';
+import FaStop from 'react-icons/fa/stop';
+import FaTimes from 'react-icons/fa/times';
+import FaExchangeAlt from 'react-icons/fa/exchangealt';
 
 class Webcam extends Component {
 
