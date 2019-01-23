@@ -4,7 +4,6 @@ import React, {
 import './webcam.scss';
 import FaStop from 'react-icons/fa/stop';
 import FaTimes from 'react-icons/fa/times';
-import FaExchangeAlt from 'react-icons/fa/exchangealt';
 
 class Webcam extends Component {
 
@@ -155,7 +154,7 @@ class Webcam extends Component {
                     )}
                 </div>
                 { this.state.mediaDevices.length > 2 &&(
-                <button className="change-record" onClick={this.nextDevice} type="button"><FaExchangeAlt/></button>
+                <button className="change-record" onClick={this.nextDevice} type="button">Change Cam</button>
                 )}
             </div>
         </div>
