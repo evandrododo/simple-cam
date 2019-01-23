@@ -22,7 +22,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-
     const client = this.state.client
     const db = this.state.db
     
@@ -43,13 +42,17 @@ class App extends Component {
       console.log('sw not supported');
     }
     if (Notification.permission === 'granted') {
-      navigator.serviceWorker.getRegistration().then(function(reg) {
-        reg.showNotification('Hello world!');
+      navigator.serviceWorker.ready
+      .then((serviceWorkerRegistration) => {
+          serviceWorkerRegistration.pushManager.getSubscription()
+          .then((subscription) => {
+                console.log('subscription', subscription.toJSON())
+          });
+          serviceWorkerRegistration.showNotification('Push notifications parecem simples')
       });
     }
   }
 
-  
   setRef = webcam => {
     this.webcam = webcam;
   };
