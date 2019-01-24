@@ -43,6 +43,7 @@
             -webkit-background-clip: padding-box;
             background-clip: padding-box; 
             transition: border-width 0.3s;
+            padding: 0;
             &:hover {
                 border-width: 10px;
             }
