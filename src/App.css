@@ -14,6 +14,13 @@ button {
   color: white;
 }
 
+.video-list {
+  max-height: 45vh;
+  overflow-y: scroll;
+  padding: 1em;
+  background-color: rgba(255,255,255,0.2);
+  align-self: flex-end;
+}
 
 .App-header {
   padding: 1em;
@@ -32,11 +39,13 @@ button {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
 button.show-cam {
+  margin-top: 5em;
+  margin-bottom: 5em;
   padding: 0.5rem 0 0 0.3rem;
   width:5rem;
   height: 5rem;

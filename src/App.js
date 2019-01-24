@@ -160,12 +160,6 @@ class App extends Component {
     })
     return (
       <div className="App">
-        <header className="App-header">
-          <span>Permissão de notificação: <b>{this.state.statusNotificacao}</b></span>
-          <span>Service worker: <b>{this.state.statusSW}</b></span>
-          <button onClick={this.displayNotification}>Gerar Notificação</button>
-          <Webcam ref={node => this.webcam = node} onRecord={this.addVideo} visibility={this.state.webcamVisibility} onClose={this.hideWebcam}/>
-        </header>
         <div className="flex-column">
           <button className="show-cam" onClick={this.showWebcam}><FaVideo/></button>
           {this.state.video && (
@@ -174,8 +168,16 @@ class App extends Component {
               <button onClick={this.saveVideo}>Enviar video</button>
             </div>
           )}
-          {videos}
+          <div className="video-list">
+            {videos}
+          </div>
         </div>
+        <header className="App-header">
+          <span>Permissão de notificação: <b>{this.state.statusNotificacao}</b></span>
+          <span>Service worker: <b>{this.state.statusSW}</b></span>
+          <button onClick={this.displayNotification}>Gerar Notificação</button>
+          <Webcam ref={node => this.webcam = node} onRecord={this.addVideo} visibility={this.state.webcamVisibility} onClose={this.hideWebcam}/>
+        </header>
       </div>
     );
   }
