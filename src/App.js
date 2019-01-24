@@ -30,6 +30,7 @@ class App extends Component {
     });
     this.retrieveVideosFromDB();
   }
+
   retrieveVideosFromDB() {
     const client = this.state.client
     const db = this.state.db
